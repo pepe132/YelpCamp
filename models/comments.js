@@ -1,23 +1,16 @@
+
 const {Schema,model}=require('mongoose');
 
-const CampgroundSchema=Schema({
-    name:{
+const CommentSchema=Schema({
+    text:{
         type:String,
        
     },
-    image:{
+    author:{
         type:String,
         
     },
-    description:{
-        type:String
-    },
-    comments:[
-        {
-            type:Schema.Types.ObjectId,
-            ref:'Comment'
-        }
-    ]
+    
 })
 
 //IMOORTANTE: aqui es donde se va a mostrar que argumentos va a llegar la respuesta 
@@ -30,4 +23,4 @@ const CampgroundSchema=Schema({
 }*/
 
 
-module.exports=model('Campground',CampgroundSchema)
+module.exports=model('Comment',CommentSchema)
